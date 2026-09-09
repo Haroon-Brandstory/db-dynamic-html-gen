@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{LANGUAGE}}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{META_TITLE}}</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <link rel="canonical" href="{{CANONICAL_URL}}">
+    <meta name="robots" content="{{ROBOTS}}">
+    <meta name="community:type" content="{{COMMUNITY_TYPE}}">
+    <meta name="community:category" content="{{COMMUNITY_CATEGORY}}">
+    <meta name="community:created" content="{{CREATED_DATE}}">
+    <meta name="community:featured" content="{{FEATURED}}">
+    <meta name="community:old-slug" content="{{OLD_SLUG}}">
+    <meta name="community:author" content="{{QUESTION_AUTHOR}}">
+    <meta name="community:avatar" content="{{QUESTION_AUTHOR_IMAGE}}">
+</head>
+
+<body>
+    <article class="community-question">
+        <p>{{QUESTION}}</p>
+    </article>
+    <section class="community-answer" data-author="{{ANSWER1_AUTHOR}}" data-date="{{ANSWER1_DATE}}"
+        data-id="{{ANSWER1_ID}}" data-avatar="{{ANSWER1_AUTHOR_IMAGE}}" data-accepted="{{ANSWER1_ACCEPTED}}">
+        <p>{{ANSWER1}}</p>
+    </section>
+    <section class="community-answer" data-id="{{ANSWER2_ID}}" data-author="{{ANSWER2_AUTHOR}}"
+        data-avatar="{{ANSWER2_AUTHOR_IMAGE}}" data-date="{{ANSWER2_DATE}}" data-accepted="{{ANSWER2_ACCEPTED}}">
+        <p>{{ANSWER2}}</p>
+    </section>
+</body>
+
+</html>

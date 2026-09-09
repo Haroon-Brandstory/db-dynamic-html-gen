@@ -1,3 +1,53 @@
+# AGENTS.md — Database LP Web
+
+## Project
+Web HTML page generator for The Database Providers.
+Next.js (App Router) + TypeScript. Hosted on Vercel.
+Bulk-generates HTML pages from Excel against master HTML templates.
+
+## Primary Rules
+1. **Never modify master HTML templates.** Read → in-memory copy → replace placeholders → emit new files / ZIP.
+2. **Only replace `{{PLACEHOLDER}}` values** (uppercase `A-Z0-9_`). Never alter HTML structure, CSS, JS, IDs, classes, or layout.
+3. Catch every exception; return precise validation errors (type, sheet, row, column, value, fix).
+4. **Do not edit** the sibling desktop app `Database LP Creator/`.
+
+## Scope
+### Shipped
+- Internal team login
+- Templates: Community, Template 1, Template 2
+- Sidebar workflow matching desktop: Dashboard, Template, Excel, Links, Validation, Generate, Reports, Projects, Settings
+- Scan → blank Excel, sample HTML, SEO preview, generate ZIP
+- Lucide icons only (no custom SVG icons)
+
+### Not yet (desktop parity backlog)
+- Project save/load persistence
+- Full report downloads pack
+- Live HTML / links / hreflang preview
+- Bulk Excel replace
+- Hreflang settings UI
+
+
+## Module Map
+| Path | Role |
+|------|------|
+| `src/app/` | Routes, login, dashboard |
+| `src/app/api/` | Auth / validate / generate |
+| `src/lib/auth.ts` | Session cookie |
+| `src/lib/templates.ts` | Bundled template catalog |
+| `src/lib/placeholders.ts` | Scan / replace |
+| `src/lib/excel.ts` | Parse service + internal Excel |
+| `src/lib/generate.ts` | Orchestrate page generation |
+| `templates/` | Master HTML (read-only) |
+
+## Conventions
+- Placeholders: `{{NAME}}` → Excel columns `NAME` (headers uppercased on read)
+- Auto-filled: `INTERNAL_LINK_*` (not required in service Excel)
+- System: `OUTPUT_FILENAME` (or derived from `SLUG`)
+- Community sheet name: `Community Content` or `service_pages`
+
+## Docs
+See `docs/agents/` and `docs/decisions/`. Track status in `progress.md`.
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know

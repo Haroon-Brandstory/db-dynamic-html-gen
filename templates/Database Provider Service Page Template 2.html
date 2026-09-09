@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+   <!-- Meta Tags -->
+   <title>{{META_TITLE}}</title>
+   <meta name="description"
+     content="{{META_DESCRIPTION}}">
+   <link rel="canonical" href="{{CANONICAL_URL}}">
+   <meta name="robots" content="index, follow">
+   <meta name="author" content="Database Providers">
+
+
+   <meta property="og:title" content="{{OG_TITLE}}">
+   <meta property="og:description"
+     content="{{OG_DESCRIPTION}}">
+   <meta property="og:image" content="{{OG_IMAGE}}">
+   <meta property="og:url" content="{{OG_URL}}">
+   <meta property="og:type" content="website">
+   <meta property="og:site_name" content="Database Providers">
+
+
+   <link rel="alternate" hreflang="en" href="{{HREFLANG_EN}}" />
+   <link rel="alternate" hreflang="en-in" href="{{HREFLANG_EN_IN}}" />
+   <link rel="alternate" hreflang="en-ae" href="{{HREFLANG_EN_AE}}" />
+   <link rel="alternate" hreflang="en-sg" href="{{HREFLANG_EN_SG}}" />
+   <link rel="alternate" hreflang="en-my" href="{{HREFLANG_EN_MY}}" />
+   <link rel="alternate" hreflang="en-ae" href="{{HREFLANG_EN_AE_DUBAI}}" />
+   <link rel="alternate" hreflang="x-default" href="{{HREFLANG_X_DEFAULT}}" />
+   <!-- End Meta Tags -->
+
+
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&display=swap"
+     rel="stylesheet"
+   />
+   <link rel="stylesheet" href="https://www.thedatabaseproviders.com/secondary-assets/assets/style/style.css" />
+   <link rel="stylesheet" href="https://www.thedatabaseproviders.com/secondary-assets/assets/style/responsive.css" />
+   <style>
+           .free-sample {
+               padding-bottom: 100px;
+           }
+           .global-data {
+               .data-item {
+                   cursor: default;
+               }
+               .data-item-link {
+                   text-decoration: none;
+                   color: inherit;
+                   transition: color 0.2s ease;
+               }
+               .data-grid-anchor .data-item-link:hover {
+                   color: #0133E9;
+               }
+           }
+           .video-showcase {
+               margin: 0;
+               padding: 100px 0;
+               background: #ffffff;
+           }
+           .video-showcase .video-wrapper {
+               max-width: 1200px;
+               width: 100%;
+               margin: 0 auto;
+               border-radius: 20px;
+               overflow: hidden;
+               background: #000000;
+               aspect-ratio: 16 / 9;
+               position: relative;
+           }
+           .video-showcase .video-poster {
+               position: absolute;
+               inset: 0;
+               background-image: url("{{YOUTUBE_POSTER_URL}}");
+               background-size: cover;
+               background-position: center;
+               z-index: 1;
+           }
+           .video-showcase .video-wrapper iframe {
+               width: 100%;
+               height: 100%;
+               border: 0;
+               display: block;
+               position: relative;
+               z-index: 0;
+           }
+           .video-showcase .video-play-btn {
+               position: absolute;
+               inset: 0;
+               margin: auto;
+               width: 72px;
+               height: 50px;
+               border: 0;
+               border-radius: 14px;
+               background: #ff0000;
+               color: #ffffff;
+               cursor: pointer;
+               z-index: 2;
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+           }
+           .video-showcase .video-play-btn::before {
+               content: "";
+               width: 0;
+               height: 0;
+               border-top: 10px solid transparent;
+               border-bottom: 10px solid transparent;
+               border-left: 16px solid #ffffff;
+               margin-left: 3px;
+           }
+           .video-showcase .video-wrapper.playing .video-play-btn {
+               display: none;
+           }
+           .video-showcase .video-wrapper.playing .video-poster {
+               display: none;
+           }
+       @media (max-width: 991px) {
+           .free-sample {
+               padding-bottom: 50px;
+           }
+           .video-showcase {
+               padding: 50px 0;
+           }
+           .hero-btn {
+               display: flex;
+               margin: 0 auto;
+           }
+           .contact-actions {
+               text-align: center;
+           }
+           .new-cbtn {
+               display: flex;
+               margin: 30px auto;
+               max-width: fit-content;
+           }
+           .new-cbtn-1 {
+               display: flex;
+               margin: 0px auto !important;
+               max-width: fit-content;
+           }
+       }
+           .instant-access {
+               & .instant-access-content {
+                   & .left {
+                       & .btn-group {
+                           & .btn-group-item {
+                               display: inline-flex;
+                               align-items: center;
+                               gap: 8px;
+                               padding: 7px 15px;
+                               background: #fff;
+                               border-radius: 20px;
+                               font-size: 16px;
+                               font-weight: 400;
+                               text-decoration: none;
+                               color: #393939;
+                           }
+                           a:hover,
+                           .btn-group-item:hover {
+                               background: #fff;
+                               color: #393939;
+                               cursor: default;
+                           }
+                           & a:hover img,
+                           & .btn-group-item:hover img {
+                               filter: none;
+                           }
+                       }
+                   }
+               }
+           }
+   </style>
+ </head>
+ <body>
+   <!-- Template 2: shuffled section order (same placeholders as Template 1) -->
+   <!-- ========== HERO BANNER ========== -->
+   <section class="hero-banner" id="hero-banner">
+     <!-- Dot-grid overlay -->
+     <div class="hero-dots"></div>
+
+
+     <div class="hero-inner">
+       <!-- LEFT CONTENT -->
+       <div class="hero-left">
+         <h1 class="hero-heading">
+           {{H1_MAIN}} <span class="hero-highlight">{{H1_HIGHLIGHT}}</span>
+         </h1>
+         <p class="hero-subtext">
+           {{HERO_SUBTEXT}}
+         </p>
+         <a href="{{HERO_CTA_URL}}" class="hero-btn" id="hero-download-btn">
+           <span>{{HERO_CTA_TEXT}}</span>
+         </a>
+       </div>
+
+
+       <!-- RIGHT CARD -->
+       <div class="hero-right">
+         <!-- Decorative connector line -->
+
+
+         <div class="stats-card" id="stats-card">
+           <div class="stats-row" id="stats-usa">
+             <div class="stats-label-group">
+               <img
+                 src="{{STATS_USA_IMAGE_URL}}"
+                 alt="{{STATS_USA_IMAGE_ALT}}"
+                 class="stats-icon"
+               />
+               <span class="stats-label">{{STATS_USA_LABEL}}</span>
+             </div>
+             <div class="stats-divider" aria-hidden="true"></div>
+             <div class="stats-count-group">
+               <p class="stats-count-title">Total counts</p>
+               <p class="stats-count-value">{{STATS_USA_COUNT}}</p>
+             </div>
+           </div>
+
+
+           <!-- Separator -->
+           <div class="stats-separator" aria-hidden="true"></div>
+
+
+           <!-- Row 2: Worldwide -->
+           <div class="stats-row" id="stats-worldwide">
+             <div class="stats-label-group">
+               <img
+                 src="{{STATS_WORLDWIDE_IMAGE_URL}}"
+                 alt="{{STATS_WORLDWIDE_IMAGE_ALT}}"
+                 class="stats-icon"
+               />
+               <span class="stats-label">Worldwide</span>
+             </div>
+             <div class="stats-divider" aria-hidden="true"></div>
+             <div class="stats-count-group">
+               <p class="stats-count-title" style="color: #00da62">
+                 Total counts
+               </p>
+               <p class="stats-count-value">{{STATS_WORLDWIDE_COUNT}}</p>
+             </div>
+           </div>
+
+
+           <!-- Footer note -->
+         </div>
+         <p class="stats-note" id="last-modified-date">*Last Modified Date: <span id="last-modified-month"></span></p>
+       </div>
+     </div>
+   </section>
+
+<section class="access">
+     <div class="contaner-c">
+       <h2>
+         {{SECTION2_TITLE}}
+         <span>{{SECTION2_TITLE_SPAN}}</span>
+       </h2>
+       <a href="{{SECTION2_CTA_URL}}" class="cbutton" id="hero-download-btn">
+         {{SECTION2_CTA_TEXT}}
+       </a>
+       <div class="access-content">
+         <div class="left">
+           <p>
+             {{SECTION2_P1}}
+           </p>
+           <p>
+             With <a href="{{SECTION2_P2_LINK_URL}}">Database Providers</a>, your marketing and sales teams can reach qualified email list through accurate business contacts, improving campaign efficiency, customer engagement, and overall return on investment.
+           </p>
+         </div>
+         <div class="right">
+           <img src="{{SECTION2_IMAGE_URL}}" alt="{{SECTION2_IMAGE_ALT}}" />
+         </div>
+       </div>
+     </div>
+   </section>
+
+<section class="instant-access" style="margin-bottom: 0;">
+     <div class="contaner-c">
+       <h2>
+         {{SECTION3_TITLE}}
+         <span>{{SECTION3_TITLE_SPAN}}</span>
+       </h2>
+       <p>
+         {{SECTION3_DESCRIPTION}}
+       </p>
+       <div class="instant-access-content">
+         <div class="left">
+           <div class="btn-group">
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               Email
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               Email Status
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               First Name
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               Last Name
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               Title
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               Company
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               Head Count
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               Industry
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               Person LinkedIn URL
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               Website
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               Company LinkedIn URL
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               Company City
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               Company State
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               Company Country
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               City
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               State
+             </span>
+             <span class="btn-group-item">
+               <img src="{{FEATURE_CHECK_ICON_URL}}" alt="" />
+               Country
+             </span>
+           </div>
+           <div class="flex-gap">
+             <a href="{{DOWNLOAD_FILE_URL}}" class="cbutton"> {{DOWNLOAD_BUTTON_TEXT}} </a>
+             <a href="{{REQUEST_LIST_CTA_URL}}" class="wbutton">
+               {{REQUEST_LIST_CTA_TEXT}}
+               <svg
+                 width="19"
+                 height="11"
+                 viewBox="0 0 19 11"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg"
+               >
+                 <path
+                   d="M0.872577 5.84479H15.5112L12.7687 8.58734C11.981 9.37509 13.1626 10.5567 13.9504 9.76892L16.4481 7.26735L18.1154 5.59739C18.4386 5.27232 18.4386 4.74731 18.1154 4.42224L13.9504 0.252339C13.7919 0.0895048 13.5738 -0.00186102 13.3465 2.87438e-05C12.5964 0.000123232 12.2282 0.91383 12.7687 1.43402L15.5178 4.17656H0.829446C-0.32588 4.23389 -0.239617 5.90231 0.872577 5.84479Z"
+                   fill="#2C6BFF"
+                 />
+               </svg>
+             </a>
+           </div>
+         </div>
+         <div class="right">
+           <img src="{{SECTION3_IMAGE_URL}}" alt="{{SECTION3_IMAGE_ALT}}" />
+         </div>
+       </div>
+     </div>
+   </section>
+
+<section class="video-showcase">
+     <div class="contaner-c">
+       <div class="video-wrapper" id="youtube-video-wrapper">
+         <div class="video-poster" aria-hidden="true"></div>
+         <button type="button" class="video-play-btn" id="youtube-play-btn" aria-label="Play video"></button>
+         <iframe
+           id="youtube-video-iframe"
+           width="560"
+           height="315"
+           src=""
+           data-src="{{YOUTUBE_URL}}"
+           title="{{YOUTUBE_TITLE}}"
+           frameborder="0"
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+           referrerpolicy="strict-origin-when-cross-origin"
+           allowfullscreen
+         ></iframe>
+       </div>
+     </div>
+   </section>
+
+<section class="data-process">
+     <div class="contaner-c">
+       <h2>Data Verification <span>Process</span></h2>
+       <!-- <img
+         class="data-process-img"
+         src="https://www.thedatabaseproviders.com/secondary-assets/assets/images/data-process.webp"
+         alt="Data Process"
+       /> -->
+       <!-- Lottie Animation -->
+       <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+       <lottie-player
+         src="{{DATA_VERIFICATION_ANIMATION_URL}}"
+         background="transparent"
+         speed="1"
+         class="lottie-player"
+         loop
+         autoplay
+       ></lottie-player>
+     </div>
+   </section>
+
+<section class="double-your-roi">
+     <div class="contaner-c">
+       <h2>{{SECTION6_TITLE}}</h2>
+       <p>
+         {{SECTION6_DESCRIPTION}}
+       </p>
+       <div class="group">
+         <div class="item">
+           <img src="{{ROI_INDUSTRIES_IMAGE_URL}}" alt="{{ROI_INDUSTRIES_IMAGE_ALT}}" />
+           <h3>Industries</h3>
+         </div>
+         <div class="item">
+           <img src="{{ROI_JOB_TITLE_IMAGE_URL}}" alt="{{ROI_JOB_TITLE_IMAGE_ALT}}" />
+           <h3>Job title</h3>
+         </div>
+         <div class="item">
+           <img src="{{ROI_LOCATION_IMAGE_URL}}" alt="{{ROI_LOCATION_IMAGE_ALT}}" />
+           <h3>Location</h3>
+         </div>
+         <div class="item">
+           <img
+             src="{{ROI_EMPLOYEE_SIZE_IMAGE_URL}}"
+             alt="{{ROI_EMPLOYEE_SIZE_IMAGE_ALT}}"
+           />
+           <h3>Employee size</h3>
+         </div>
+         <div class="item">
+           <img src="{{ROI_REVENUE_SIZE_IMAGE_URL}}" alt="{{ROI_REVENUE_SIZE_IMAGE_ALT}}" />
+           <h3>Revenue size</h3>
+         </div>
+       </div>
+       <a href="{{SECTION6_CTA_URL}}" class="cbutton"> {{SECTION6_CTA_TEXT}} </a>
+     </div>
+   </section>
+
+<section class="purchase-executives">
+     <div class="contaner-c">
+       <h2>
+         {{SECTION7_TITLE}} <span>{{SECTION7_TITLE_SPAN}}</span>
+       </h2>
+       <div class="purchase-content">
+         <div class="left">
+           <img
+             src="{{SECTION7_IMAGE_URL}}"
+             alt="{{SECTION7_IMAGE_ALT}}"
+           />
+         </div>
+         <div class="right">
+           <p>
+             {{SECTION7_P1}}
+           </p>
+           <p>
+             {{SECTION7_P2}}
+           </p>
+           <p>
+             <a href="{{SECTION7_P3_LINK_URL}}">{{SECTION7_P3_LINK_TEXT}}</a> from Database Providers with verified, targeted contacts, high data accuracy, and reliable solutions to support successful marketing campaigns.
+           </p>
+           <a href="{{SECTION7_CTA_URL}}" class="cbutton new-cbtn"> {{SECTION7_CTA_TEXT}} </a>
+         </div>
+       </div>
+     </div>
+   </section>
+
+<section class="reach-us-executives" style="margin-bottom: 0;">
+     <div class="contaner-c">
+       <h2>{{SECTION5_TITLE}}</h2>
+       <a href="{{SECTION5_CTA_URL}}" class="wbutton"> {{SECTION5_CTA_TEXT}} </a>
+     </div>
+   </section>
+
+<section class="why-choose" style="margin-bottom: 0;">
+     <div class="contaner-c">
+       <div class="why-choose-content">
+         <div class="left">
+           <img
+             src="{{SECTION9_IMAGE_URL}}"
+             alt="{{SECTION9_IMAGE_ALT}}"
+           />
+         </div>
+         <div class="right">
+           <h2>{{SECTION9_TITLE}}</h2>
+           <p>
+             {{SECTION9_DESCRIPTION}}
+           </p>
+           <ul>
+             <li>{{SECTION9_LI_1}}</li>
+             <li>{{SECTION9_LI_2}}</li>
+             <li>{{SECTION9_LI_3}}</li>
+             <li>{{SECTION9_LI_4}}</li>
+             <li>{{SECTION9_LI_5}}</li>
+             <li>{{SECTION9_LI_6}}</li>
+           </ul>
+           <a href="{{SECTION9_CTA_URL}}" class="cbutton new-cbtn-1"> {{SECTION9_CTA_TEXT}} </a>
+         </div>
+       </div>
+     </div>
+   </section>
+
+<section class="global-data" style="margin-bottom: 0;">
+     <div class="contaner-c">
+       <h2>
+         {{SECTION8_TITLE}} <br />
+         <span>{{SECTION8_TITLE_SPAN}}</span>
+       </h2>
+       <div class="data-grid data-grid-anchor">
+         <div class="data-item">
+           <a href="{{INTERNAL_LINK_1_URL}}" class="data-item-link">{{INTERNAL_LINK_1_TEXT}}</a>
+         </div>
+         <div class="data-item">
+           <a href="{{INTERNAL_LINK_2_URL}}" class="data-item-link">{{INTERNAL_LINK_2_TEXT}}</a>
+         </div>
+         <div class="data-item">
+           <a href="{{INTERNAL_LINK_3_URL}}" class="data-item-link">{{INTERNAL_LINK_3_TEXT}}</a>
+         </div>
+         <div class="data-item">
+           <a href="{{INTERNAL_LINK_4_URL}}" class="data-item-link">{{INTERNAL_LINK_4_TEXT}}</a>
+         </div>
+         <div class="data-item">
+           <a href="{{INTERNAL_LINK_5_URL}}" class="data-item-link">{{INTERNAL_LINK_5_TEXT}}</a>
+         </div>
+         <div class="data-item">
+           <a href="{{INTERNAL_LINK_6_URL}}" class="data-item-link">{{INTERNAL_LINK_6_TEXT}}</a>
+         </div>
+         <div class="data-item">
+           <a href="{{INTERNAL_LINK_7_URL}}" class="data-item-link">{{INTERNAL_LINK_7_TEXT}}</a>
+         </div>
+         <div class="data-item">
+           <a href="{{INTERNAL_LINK_8_URL}}" class="data-item-link">{{INTERNAL_LINK_8_TEXT}}</a>
+         </div>
+         <div class="data-item">
+           <a href="{{INTERNAL_LINK_9_URL}}" class="data-item-link">{{INTERNAL_LINK_9_TEXT}}</a>
+         </div>
+         <div class="data-item">
+           <a href="{{INTERNAL_LINK_10_URL}}" class="data-item-link">{{INTERNAL_LINK_10_TEXT}}</a>
+         </div>
+         <div class="data-item">
+           <a href="{{INTERNAL_LINK_11_URL}}" class="data-item-link">{{INTERNAL_LINK_11_TEXT}}</a>
+         </div>
+         <div class="data-item">
+           <a href="{{INTERNAL_LINK_12_URL}}" class="data-item-link">{{INTERNAL_LINK_12_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_13_URL}}" class="data-item-link">{{INTERNAL_LINK_13_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_14_URL}}" class="data-item-link">{{INTERNAL_LINK_14_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_15_URL}}" class="data-item-link">{{INTERNAL_LINK_15_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_16_URL}}" class="data-item-link">{{INTERNAL_LINK_16_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_17_URL}}" class="data-item-link">{{INTERNAL_LINK_17_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_18_URL}}" class="data-item-link">{{INTERNAL_LINK_18_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_19_URL}}" class="data-item-link">{{INTERNAL_LINK_19_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_20_URL}}" class="data-item-link">{{INTERNAL_LINK_20_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_21_URL}}" class="data-item-link">{{INTERNAL_LINK_21_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_22_URL}}" class="data-item-link">{{INTERNAL_LINK_22_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_23_URL}}" class="data-item-link">{{INTERNAL_LINK_23_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_24_URL}}" class="data-item-link">{{INTERNAL_LINK_24_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_25_URL}}" class="data-item-link">{{INTERNAL_LINK_25_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_26_URL}}" class="data-item-link">{{INTERNAL_LINK_26_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_27_URL}}" class="data-item-link">{{INTERNAL_LINK_27_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_28_URL}}" class="data-item-link">{{INTERNAL_LINK_28_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_29_URL}}" class="data-item-link">{{INTERNAL_LINK_29_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_30_URL}}" class="data-item-link">{{INTERNAL_LINK_30_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_31_URL}}" class="data-item-link">{{INTERNAL_LINK_31_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_32_URL}}" class="data-item-link">{{INTERNAL_LINK_32_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_33_URL}}" class="data-item-link">{{INTERNAL_LINK_33_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_34_URL}}" class="data-item-link">{{INTERNAL_LINK_34_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_35_URL}}" class="data-item-link">{{INTERNAL_LINK_35_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_36_URL}}" class="data-item-link">{{INTERNAL_LINK_36_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_37_URL}}" class="data-item-link">{{INTERNAL_LINK_37_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_38_URL}}" class="data-item-link">{{INTERNAL_LINK_38_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_39_URL}}" class="data-item-link">{{INTERNAL_LINK_39_TEXT}}</a>
+         </div>
+         <div class="data-item hidden">
+           <a href="{{INTERNAL_LINK_40_URL}}" class="data-item-link">{{INTERNAL_LINK_40_TEXT}}</a>
+         </div>
+       </div>
+       <a href="javascript:void(0)" class="show-more" id="show-more-btn">
+         <span class="btn-text">Show More</span>
+         <svg
+           width="12"
+           height="7"
+           viewBox="0 0 12 7"
+           fill="none"
+           xmlns="http://www.w3.org/2000/svg"
+         >
+           <path
+             d="M1 1L6 6L11 1"
+             stroke="#0133E9"
+             stroke-width="1.5"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+           />
+         </svg>
+       </a>
+     </div>
+   </section>
+
+<section class="faq-section">
+     <div class="contaner-c">
+       <h2>FAQ's</h2>
+       <div class="faq-grid">
+         <div class="faq-column">
+           <!-- FAQ Item 1 (Open) -->
+           <div class="faq-item active">
+             <div class="faq-header">
+               <h3>
+                 1. {{FAQ1_QUESTION}}
+               </h3>
+               <span class="faq-toggle">-</span>
+             </div>
+             <div class="faq-body">
+               <p>
+                 {{FAQ1_ANSWER}}
+               </p>
+             </div>
+           </div>
+           <!-- FAQ Item 2 -->
+           <div class="faq-item">
+             <div class="faq-header">
+               <h3>2. {{FAQ2_QUESTION}}</h3>
+               <span class="faq-toggle">+</span>
+             </div>
+             <div class="faq-body">
+               <p>
+                 {{FAQ2_ANSWER}}
+               </p>
+             </div>
+           </div>
+         </div>
+         <div class="faq-column">
+           <!-- FAQ Item 3 -->
+           <div class="faq-item">
+             <div class="faq-header">
+               <h3>3. {{FAQ3_QUESTION}}</h3>
+               <span class="faq-toggle">+</span>
+             </div>
+             <div class="faq-body">
+               <p>
+                 {{FAQ3_ANSWER}}
+               </p>
+             </div>
+           </div>
+           <!-- FAQ Item 4 -->
+           <div class="faq-item">
+             <div class="faq-header">
+               <h3>4. {{FAQ4_QUESTION}}</h3>
+               <span class="faq-toggle">+</span>
+             </div>
+             <div class="faq-body">
+               <p>
+                 {{FAQ4_ANSWER}}
+               </p>
+             </div>
+           </div>
+           <!-- FAQ Item 5 -->
+           <div class="faq-item">
+             <div class="faq-header">
+               <h3>5. {{FAQ5_QUESTION}}</h3>
+               <span class="faq-toggle">+</span>
+             </div>
+             <div class="faq-body">
+               <p>
+                 {{FAQ5_ANSWER}}
+               </p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+<section class="free-sample">
+     <div class="contaner-c">
+       <div class="sample-content">
+         <div class="left">
+           <h2>{{SECTION11_TITLE}}</h2>
+           <p>
+             {{SECTION11_DESCRIPTION}}
+           </p>
+           <p class="tagline">{{SECTION11_TAGLINE}}</p>
+         </div>
+         <div class="right">
+           <div class="form-card contact-card">
+             <div class="contact-copy">
+               <p>
+                 {{SECTION11_FORM_TEXT}}
+               </p>
+             </div>
+             <div class="contact-actions">
+               <a href="{{SECTION11_CTA_URL}}" class="cbutton contact-btn">
+                 {{SECTION11_CTA_TEXT}}
+               </a>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+   <script>
+       (function () {
+         var d = new Date();
+         var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+         var el = document.getElementById('last-modified-month');
+         if (el) el.textContent = months[d.getMonth()] + ' ' + d.getFullYear();
+       })();
+   </script>
+   <script>
+     document.querySelectorAll(".faq-item").forEach((item) => {
+       item.addEventListener("click", () => {
+         const isActive = item.classList.contains("active");
+
+
+         if (isActive) {
+           // If already active, just close it
+           item.classList.remove("active");
+           item.querySelector(".faq-toggle").innerText = "+";
+         } else {
+           // Close all items first
+           document.querySelectorAll(".faq-item").forEach((other) => {
+             other.classList.remove("active");
+             other.querySelector(".faq-toggle").innerText = "+";
+           });
+           // Then open the clicked one
+           item.classList.add("active");
+           item.querySelector(".faq-toggle").innerText = "-";
+         }
+       });
+     });
+
+
+     // Show More functionality for Global Data
+     const showMoreBtn = document.getElementById("show-more-btn");
+     const hiddenItems = document.querySelectorAll(".data-item.hidden");
+     let isShowingAll = false;
+
+
+     if (showMoreBtn) {
+       showMoreBtn.addEventListener("click", () => {
+         isShowingAll = !isShowingAll;
+
+
+         hiddenItems.forEach((item) => {
+           item.style.display = isShowingAll ? "block" : "none";
+         });
+
+
+         showMoreBtn.querySelector(".btn-text").innerText = isShowingAll
+           ? "Show Less"
+           : "Show More";
+         showMoreBtn.classList.toggle("active", isShowingAll);
+       });
+     }
+
+
+     // Add gtm-button class to all anchor tags
+     document.querySelectorAll("a").forEach((anchor) => {
+       anchor.classList.add("gtm-button");
+     });
+
+
+     const videoPlayBtn = document.getElementById("youtube-play-btn");
+     const videoIframe = document.getElementById("youtube-video-iframe");
+     const videoWrapper = document.getElementById("youtube-video-wrapper");
+
+
+     if (videoPlayBtn && videoIframe && videoWrapper) {
+       videoPlayBtn.addEventListener("click", () => {
+         const baseSrc = videoIframe.dataset.src || "";
+         const currentSrc = (videoIframe.getAttribute("src") || "").trim();
+         if (!currentSrc && baseSrc) {
+           const separator = baseSrc.includes("?") ? "&" : "?";
+           videoIframe.src = `${baseSrc}${separator}autoplay=1&playsinline=1&rel=0`;
+         }
+         videoWrapper.classList.add("playing");
+       });
+     }
+   </script>
+ </body>
+</html>
