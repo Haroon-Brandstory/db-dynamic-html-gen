@@ -3,6 +3,8 @@
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { KeyRound, Loader2 } from "lucide-react";
+import { BrandLogo } from "@/components/ui/brand-logo";
+import { PrimaryButton } from "@/components/ui/button";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -36,12 +38,7 @@ export default function LoginPage() {
 
   return (
     <main className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/db_pro_logo.svg"
-        alt="The Database Providers"
-        className="mb-6 h-10 w-auto max-w-[240px] object-contain object-left"
-      />
+      <BrandLogo heightClass="h-10" className="mb-6 max-w-[240px]" />
       <p className="mb-2 text-sm tracking-[0.2em] text-[var(--muted)] uppercase">
         Internal access
       </p>
@@ -59,7 +56,10 @@ export default function LoginPage() {
         onSubmit={onSubmit}
         className="rounded-2xl border border-[var(--line)] bg-[var(--bg-card)]/90 p-6 shadow-[0_0_0_1px_rgba(2,54,239,0.25),0_24px_80px_rgba(0,20,68,0.55)] backdrop-blur-sm"
       >
-        <label className="mb-2 flex items-center gap-2 text-sm text-[var(--muted)]" htmlFor="password">
+        <label
+          className="mb-2 flex items-center gap-2 text-sm text-[var(--muted)]"
+          htmlFor="password"
+        >
           <KeyRound size={16} />
           Team password
         </label>
@@ -77,14 +77,10 @@ export default function LoginPage() {
             {error}
           </p>
         ) : null}
-        <button
-          type="submit"
-          disabled={busy}
-          className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-4 py-2.5 font-medium text-white transition hover:bg-[var(--accent-light)] disabled:opacity-60"
-        >
+        <PrimaryButton type="submit" disabled={busy} className="w-full py-2.5">
           {busy ? <Loader2 size={18} className="animate-spin" /> : null}
           {busy ? "Signing in…" : "Sign in"}
-        </button>
+        </PrimaryButton>
       </form>
     </main>
   );

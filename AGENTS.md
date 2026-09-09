@@ -30,10 +30,17 @@ Bulk-generates HTML pages from Excel against master HTML templates.
 ## Module Map
 | Path | Role |
 |------|------|
-| `src/app/` | Routes, login, dashboard |
-| `src/app/api/` | Auth / validate / generate |
+| `src/app/` | Thin routes (login, dashboard) |
+| `src/app/api/` | Auth / scan / validate / generate / sample / seo |
+| `src/components/ui/` | Shared UI (Button, Card, FileUpload, BrandLogo) |
+| `src/components/layout/` | AppSidebar, AppHeader |
+| `src/components/dashboard/` | Feature panels + DashboardShell |
+| `src/hooks/use-lp-workflow.ts` | Client workflow state + API actions |
+| `src/lib/types.ts` | Shared domain types |
+| `src/lib/catalog.ts` | Client template picker copy |
+| `src/lib/nav.ts` | Sidebar nav config |
 | `src/lib/auth.ts` | Session cookie |
-| `src/lib/templates.ts` | Bundled template catalog |
+| `src/lib/templates.ts` | Bundled master HTML load (server) |
 | `src/lib/placeholders.ts` | Scan / replace |
 | `src/lib/excel.ts` | Parse service + internal Excel |
 | `src/lib/generate.ts` | Orchestrate page generation |

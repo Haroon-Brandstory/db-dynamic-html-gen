@@ -1,7 +1,8 @@
 import { readFile } from "fs/promises";
 import path from "path";
+import type { TemplateId } from "@/lib/types";
 
-export type TemplateId = "community" | "template1" | "template2";
+export type { TemplateId } from "@/lib/types";
 
 export type TemplateMeta = {
   id: TemplateId;

@@ -9,6 +9,8 @@
 - Generate Sample HTML
 - SEO preview (row 1)
 - Activity log + toolbar actions
+- Dark brand theme + logo
+- **Component split:** `components/ui`, `layout`, `dashboard` panels + `useLpWorkflow` hook
 
 ## Still missing vs desktop (next)
 - Persist projects (save/load JSON / Blob)
